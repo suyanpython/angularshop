@@ -1,0 +1,36 @@
+<div class="product-card">
+  <img [src]="product.imageUrl" 
+       [alt]="product.name" 
+       class="product-image">
+  
+  <div class="product-content">
+    <h3 class="product-title">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    
+    <div class="price-container">
+      <div class="price-info">
+        <span class="original-price" [class.on-sale]="product.onSale">
+          {{ product.price }}€
+        </span>
+        <span *ngIf="product.onSale" class="sale-price">
+          {{ product.salePrice }}€
+        </span>
+      </div>
+      
+      <div class="availability">
+        <span *ngIf="!product.available" class="out-of-stock">
+          En rupture de stock
+        </span>
+        <button *ngIf="product.available"
+                (click)="addToCart()"
+                class="add-to-cart">
+          Ajouter au panier
+        </button>
+      </div>
+    </div>
+    
+    <div *ngIf="product.onSale" class="sale-badge">
+      En solde
+    </div>
+  </div>
+</div>

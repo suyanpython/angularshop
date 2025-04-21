@@ -1,0 +1,13 @@
+.reviews-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+select {
+  background-color: white;
+  border-color: #e5e7eb;
+}
+
+select:focus {
+  border-color: #3b82f6;
+}
