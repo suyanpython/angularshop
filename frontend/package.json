@@ -14,6 +14,7 @@
     "@angular/forms": "^19.0.6",
     "@angular/platform-browser": "^19.0.6",
     "@angular/router": "^19.0.6",
+    "@nestjs/microservices": "^11.0.20",
     "@stripe/stripe-js": "^2.2.0",
     "rxjs": "^7.8.1",
     "tslib": "^2.5.0",
